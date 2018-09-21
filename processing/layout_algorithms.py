@@ -95,6 +95,8 @@ class PrintLayoutMapWidgetWrapper(WidgetWrapper):
         self._combo = QgsLayoutItemComboBox()
         self._combo.setItemType(QgsLayoutItemRegistry.LayoutMap)
 
+        # TODO -- overwrite layout item mode, hiding selected status, sort by name (not z-order)
+
         self._combo.currentIndexChanged.connect(lambda: self.widgetValueHasChanged.emit(self))
         return self._combo
 
